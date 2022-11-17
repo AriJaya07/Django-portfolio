@@ -18,32 +18,22 @@
 
 {% block content %}
 
-<section>
-  <div class="innerPageBannerCol">
-    <div class="container">
-      <div class="row g-4 g-md-3  align-items-center">
-        <div class="col-md-6">
-          <div class="bannerContent">
-            <h1 class="xlTitle pb-md-3">See my recent projects below</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-
-
-<!-- Blog Post Section -->
-<section id="posts">
+<section id="footer">
   <div class="container">
-    <div class="grid">
-      <!-- article -->
-      <div class="grid-item">
-        <article class="article">
+    <div class="row mb-3">
 
+      
+      <div class="col-3">
+        
+      </div>
+      
+      <!-- Blog Post Section -->
+      <div class="col-3">
+        <div class="bannerContent">
+            <h1 class="xlTitle pb-md-3">See My Recent Projects Below</h1>
+        </div>
         {% for obj in object_list %}
-
           <div class="card">
             <div class="overflow-img">
               <a href="{% url 'main:portfolio' slug=obj.slug %}" >
@@ -52,8 +42,12 @@
             </div>
           </div>
         {% endfor %}
-        </article>
       </div>
+
+      <div class="col-3">
+        
+      </div>
+        
     </div>
   </div>
 </section>

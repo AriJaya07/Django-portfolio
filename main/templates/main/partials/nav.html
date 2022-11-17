@@ -3,8 +3,8 @@
 <!-- Header -->
 <header id="header" class="shadow bg-light">
     <nav class="container navbar">
-        <a href="/index.html" class="nav-brand text-dark">
-             AriJaya
+        <a href="https://github.com/Arijaya07/"class="nav-brand text-dark">
+             My GitHub
          </a>
 
          <!-- toggle button -->
@@ -15,12 +15,10 @@
          <!-- collapse on toggle button click -->
          <div class="collapse">
              <ul class="navbar-nav">
-                 <a href="#" class="nav-link">Home</a>
-                 <a href="#" class="nav-link">Blog</a>
-                 <a href="#" class="nav-link">Portfolio</a>
-                 <a href="#" class="nav-link">Certificate</a>
-                 <a href="#" class="nav-link">About</a>
-                 <a href="#" class="nav-link">Contact</a>
+                <a href="{% url 'main:home' %}" class="nav-link">Home</a>
+                <a href="{% url 'main:blogs' %}" class="nav-link">Blog</a>
+                <a href="{% url 'main:portfolios' %}" class="nav-link">Portfolio</a>
+                <a href="{% url 'main:contact' %}" class="nav-link">Contact</a>
              </ul>
          </div>
            
