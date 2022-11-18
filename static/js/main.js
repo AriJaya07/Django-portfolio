@@ -1,7 +1,7 @@
 let toggle = document.querySelector("#header .toggle-button");
 let collapse = document.querySelectorAll("#header .collapse");
 
-toggle.addEventListener('click' , function(){
+toggle.addEventListener('click', function(){
     collapse.forEach(col => col.classList.toggle("collapse-toggle"));
 })
 
@@ -11,7 +11,7 @@ new Masonry("#posts .grid", {
     gutter : 20
 });
 
-// swiper libray initialization
+// swiper library innitialization
 new Swiper('.swiper-container', {
     direction : 'horizontal',
     loop : true,
@@ -19,7 +19,8 @@ new Swiper('.swiper-container', {
     autoplay : {
         delay : 3000
     },
-    // responsive brakpoints
+
+    //responsive breakpoints
     breakpoints : {
         '@0' : {
             slidesPerView : 2
@@ -34,25 +35,25 @@ new Swiper('.swiper-container', {
         },
         // 1330px
         '@1.50' : {
-            slidesPerView: 5
-        }
+            slidesPerView : 5
+        },
     }
 })
 
 // Sticky Navigation
-window.onscroll = function(){ myFunction()};
+window.onscroll = function(){myfunction()};
 
-// get the current value 
-let navbar = document.getElementById("header");
+// get the current value
+let navbar =  document.getElementById("header");
 
-// get the navbar position
+//get the navabar position
 let sticky = navbar.offsetTop;
 
 // sticky function
 function myFunction(){
     if(window.pageYOffset >= sticky){
         navbar.classList.add("sticky");
-    }else{
+    } else{
         navbar.classList.remove("sticky");
     }
 }

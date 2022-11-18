@@ -24,7 +24,7 @@
 
       <div class="col-3">
         <div class="bannerContent">
-          <h1 class="xlTitle pb-md-3">See My Recent Blogs Below</h1>
+          <h1 class="xlTitle pb-md-3">See My Recent Certificate</h1>
         </div>
       </div>
 
@@ -32,8 +32,10 @@
         {% for obj in object_list %}
           <div class="card">
             <div class="overflow-img">
-              <a href="{% url 'main:blog' slug=obj.slug %}" >
+              <a href="{% url 'main:blog' slug=obj.slug %}">
+                <hr>
                 <img src="{{obj.image.url}}" alt="..." class="img-fluid">
+                <h4 class="post-author text-center">View</h4>
               </a>
             </div>
           </div>

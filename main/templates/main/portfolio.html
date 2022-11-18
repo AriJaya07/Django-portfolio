@@ -25,19 +25,27 @@
 
       
       <div class="col-3">
-        
+        <div class="bannerContent">
+            <h1 class="xlTitle pb-md-3">See My Recent Projects</h1>
+            <p>
+              Another tips is to start buliding a portfolio. Making project is a great way to show off your skill to recruiters. The better way to go about this  to add a couple of capstone, or major projects, into your portfolio instead of several of small projects
+              These big projects will show that you are job ready much more than a whole bunch of simple projects that everyone makes. Get creative with these and to make them your own. You can build anything you want, the more advanced, the better again
+              <br><br><br>
+              There are so many great Youtube channels that go into great detail on all the information provided here, and the best part about Youtube is... It is completely free!, one channel I recommend Cleverprogrammer! They provide a great 10-hours course where they do a review of the main topics that you need to know if you want to start your career in web development
+            </p>              
+        </div>
       </div>
       
       <!-- Blog Post Section -->
       <div class="col-3">
-        <div class="bannerContent">
-            <h1 class="xlTitle pb-md-3">See My Recent Projects Below</h1>
-        </div>
+        
         {% for obj in object_list %}
           <div class="card">
             <div class="overflow-img">
               <a href="{% url 'main:portfolio' slug=obj.slug %}" >
+                <hr>
                 <img src="{{obj.image.url}}" alt="..." class="img-fluid">
+                <h4 class="post-author text-center">View</h4>
               </a>
             </div>
           </div>
