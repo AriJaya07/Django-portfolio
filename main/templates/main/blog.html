@@ -22,19 +22,19 @@
   <div class="container">
     <div class="row mb-3">
 
-      <div class="col-3">
+      <div class="col-7">
         <div class="bannerContent">
           <h1 class="xlTitle pb-md-3">See My Recent Certificate</h1>
         </div>
       </div>
 
-      <div class="col-3">
+      <div class="col-5">
         {% for obj in object_list %}
           <div class="card">
             <div class="overflow-img">
               <a href="{% url 'main:blog' slug=obj.slug %}">
                 <hr>
-                <img src="{{obj.image.url}}" alt="..." class="img-fluid">
+                <img src="{{obj.image.url}}" alt="..." class="card-img-top">
                 <h4 class="post-author text-center">View</h4>
               </a>
             </div>

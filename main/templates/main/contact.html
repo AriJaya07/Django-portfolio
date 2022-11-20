@@ -28,21 +28,18 @@
         
         <div class="post-author text-center">
             <div class="author-avatar">
-                <img src="{{me.userprofile.avatar.url}}" alt="{{me.first_name|title}}{{me.last_name|title}}avatar">
+                <img src="{{me.userprofile.avatar.url}}" class="img-thumbnail rounded" alt="{{me.first_name|title}}{{me.last_name|title}}avatar">
             </div>
-        
+            <br>
         <div class="col-md">
             <div class="author-avatar">
                 <h1 class="xlTitle pb-3">Hi, I'm {{me.first_name|title}} <br> a {{me.userprofile.title}} </br></h1>
                 <p class="text-center">{{me.userprofile.bio}}</p>
         
         <div class="post-footer mb-3">
-            <div class="post-tags d-flex flex-wrap justify-content-center">
-                <div class="nav-link btn">
+            <div class="d-flex justify-content-center gap-2">
                     <a download href="{{me.userprofile.cv.url}}" class="btn btn-primary btn-lg">Download Resume</a>
-                </div>
-                <div class="nav-link btn">
-                    <button type="button" class="btn btn-light btn-lg">Contact</button>
+                    <a href="{% url 'main:contact' %}" type="button" class="btn btn-light btn-lg">Contact</a>
                 </div>
             </div>
         </div>
@@ -50,22 +47,14 @@
 </section>
 
 
-<section>
-    <div class="innerPageBannerCol">
-        <div class="container">
-            <div class="row g-4 g-md-3 align-items-center">
-                <div class="col-md-6">
-                    <div class="bannerContent">
-                        <h1 class="xlTitle pb-md-3">Contact us below</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="site-main">
+    <div class="container">
+        <h1 class="text-start">Contact us below</h1>
     </div>
 </section>
 
 <section>
-    <div class="lightbg">
+    <div class="mb-3">
         <div class="container">
             <form id="containerForm" method="POST" action="/contact/">
                 {% csrf_token %}
@@ -78,7 +67,9 @@
                 <label for="subject">Message</label>
                 {{form.message}}
 
-                <input class='btn btnPrimary' type="submit" value="Submit">
+                <br>
+
+                <input class='btn btn-primary' type="submit" value="Submit">
             </form>
         </div>
     </div>

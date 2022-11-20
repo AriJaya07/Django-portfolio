@@ -17,13 +17,10 @@
 
 
 {% block content %}
-<section>
-  <div class="innerPageBannerCol">
+<section >
+  <div>
     <div class="container">
-      <div class="post-author text-center">
-        <div class="col-md-6">
-          <div class="bannerContent">
-            <h1 class="xlTitle pb-md-3">{{object.name}}</h1>
+            <h1 class="pb-md-3">{{object.name}}</h1>
           </div>
         </div>
       </div>
@@ -32,7 +29,7 @@
 </section>
 
 <section>
-  <div class="sectionSpaceSm">
+  <div class="nav-link py-2 px-0 px-lg-2">
     <div class="container">
       {{object.body|safe}}
     </div>
