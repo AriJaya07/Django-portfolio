@@ -1,28 +1,27 @@
 {% load static %}
 
-<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+    <div class="container-fluid">
+        <a class="navbar-brand fs-2" href="https://github.com/Arijaya07/">My GitHub</a>
 
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<header id="header" class="shadow bg-light">
-    <nav class="container navbar">
-        <a href="https://github.com/Arijaya07/" class="nav-brand text-dark">
-             My GitHub
-         </a>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
 
-         <!-- toggle button -->
-         <button class="toggle-button">
-             <span><i class="fas fa-bars"></i></span>
-         </button>
-
-         <!-- collapse on toggle button click -->
-         <div class="collapse">
-             <ul class="navbar-nav">
-                <a href="{% url 'main:home' %}" class="nav-link">Home</a>
-                <a href="{% url 'main:portfolios' %}" class="nav-link">Portfolio</a>
-                <a href="{% url 'main:blogs' %}" class="nav-link">Certificate</a>
-                <a href="{% url 'main:contact' %}" class="nav-link">Contact</a>
-             </ul>
-         </div>
-           
-    </nav>
-</header>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <a href="{% url 'main:home' %}" class="nav-link text-white">Home</a>
+                    <a href="{% url 'main:portfolios' %}" class="nav-link text-white">Portfolio</a>
+                    <a href="{% url 'main:blogs' %}" class="nav-link text-white">Certificate</a>
+                    <a href="{% url 'main:contact' %}" class="nav-link text-white">Contact</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
