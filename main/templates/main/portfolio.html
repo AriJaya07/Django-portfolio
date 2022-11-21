@@ -43,16 +43,17 @@
           <div class="card">
             <div class="overflow-img">
               <a href="{% url 'main:portfolio' slug=obj.slug %}" >
-                <hr>
                 <img src="{{obj.image.url}}" alt="..." class="img-fluid">
-                <h4 class="post-author text-center">View</h4>
+                <h4 class="btn btn-light btn-sm d-grid">View Page</h4>
               </a>
             </div>
           </div>
         {% endfor %}
+
       </div>
 
-        
+     <a href="https://github.com/AriJaya07" class="btn btn-primary btn-sm  m-3 mx-auto">View Source</a> 
+
     </div>
   </div>
 </section>

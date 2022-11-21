@@ -33,9 +33,8 @@
           <div class="card">
             <div class="overflow-img">
               <a href="{% url 'main:blog' slug=obj.slug %}">
-                <hr>
-                <img src="{{obj.image.url}}" alt="..." class="card-img-top">
-                <h4 class="post-author text-center">View</h4>
+                <img src="{{obj.image.url}}" alt="..." class="img-fluid">
+                <h4 class="btn btn-light btn-sm d-grid">View Page</h4>
               </a>
             </div>
           </div>
